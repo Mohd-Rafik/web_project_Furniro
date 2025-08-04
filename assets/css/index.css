@@ -210,13 +210,13 @@ footer ul li a { color: var(--text-color-dark); font-size: var(--fs-5); }
     .left-side { width: 100%; margin-bottom: 2rem; display: flex; justify-content: center; text-align: center; }
     .slider-right { width: 100%; display: flex; justify-content: center; }
     .caption { display: flex; justify-content: center; text-align: center; flex-direction: column; margin-left: 12rem; }
-}
+
 
 .menu { display: none; }
 .menuicon { display: block; display: flex; text-align: center; }
 .Newsletter { width: 100%; }
 .Newsletter form { width: 100%; }
-
+}
 @media (max-width: 768px) {
     .content { width: 100%; }
     .swiper-slide:nth-child(1) { display: block !important; }
