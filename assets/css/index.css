@@ -446,32 +446,138 @@ footer ul li a {
 }
 
 /*  section*/
-.room-section {
-    background-color: var(--primary-color);
+.slider-section .container {
+    width: calc(100% - 100px);
+    /* 50px space on left/right ~ 100px offset */
+    margin: auto;
+    padding: 4rem 0;
 }
 
-.left-side {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.img2 {
+    max-width: 100%;
+    height: 300px;
+    display: block;
 
 }
 
-.right-side>div img {
+.img-fit {
     width: 100%;
-}
-
-.right-side #active img {
-    height: 582px;
+    height: auto;
+    display: block;
     object-fit: cover;
 }
 
-#next-img {
-    height: 400px;
+/* Left Section */
+.slider-left {
+    flex: 1;
+}
+
+.slider-left p {
+    color: #555;
+}
+
+.explore-btn {
+    background: #b88e2f;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+}
+
+/* Swiper Right */
+.slider-right {
+    flex: 1.5;
+}
+
+.swiper-slide {
+    border-radius: 4px;
+}
+
+.caption {
+    bottom: 1rem;
+    left: 1rem;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 0.4rem 1.5rem;
+}
+
+.caption p {
+    font-size: 0.9rem;
+}
+
+.caption h3 {
+    margin-top: 0.2rem;
+}
+
+.arrow-btn {
+    left: 9.7rem;
+    top: 3.1rem;
+    background: #b88e2f;
+    padding: 0.3rem 0.5rem;
+    cursor: pointer;
+}
+.swiper-pagination-bullet {
+    background: #ddd;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background: #b88e2f;
+}
+
+#btn {
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  background: white;
+  padding: 0.6rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#btn img.btn-img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 992px) {
+    .slider-section .container {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .slider-left {
+        text-align: center;
+    }
 
 }
 
+.slider-left {
+    flex: 1;
+}
 
+.slider-left p {
+    color: #555;
+}
+
+
+.slider-right {
+    width: calc(100vw - 100%);
+    flex: 1.5;
+}
+
+.swiper-slide {
+    border-radius: 4px;
+}
 
 .caption {
     bottom: 1rem;
@@ -500,70 +606,49 @@ footer ul li a {
     color: white;
 }
 
-#next-img img {
-    background-repeat: no-repeat;
-    background-size: cover;
-    object-fit: contain;
-    width: 100%;
-    height: 100%;
-    display: block;
-}
-
-#last-img {
-    height: 400px;
-}
-
-#last-img img {
-    background-repeat: no-repeat;
-    background-size: cover;
-    object-fit: contain;
-    width: 100%;
-    height: 100%;
-    display: block;
-    overflow: hidden;
-}
-
-.btn-left {
-    background-color: white;
-    height: fit-content;
-    border-radius: 100%;
-    border: none;
-    padding: 0.3rem;
-    box-shadow: 10px 10px 5px white inset;
-    align-items: center;
-}
-
-.btn-left img {
-    height: 20px;
-    width: 20px;
-}
-
-.swiper-pagination {
-    position: absolute;
-    bottom: -1.2rem;
-    /* dot image के नीचे */
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 0.5rem;
-    z-index: 10;
-}
 
 .swiper-pagination-bullet {
-    width: 120px;
-    height: 120px;
-    background-color: red;
-    border: 2px solid #B88E2F;
-    border-radius: 50%;
-    /* opacity: 1; */
-    transition: all 0.3s ease;
+    background: #ddd;
+    opacity: 1;
 }
 
 .swiper-pagination-bullet-active {
-    background-color: black;
-    border-color: #B88E2F;
+    background: #b88e2f;
 }
 
+.swiper-button-next {
+    padding-inline: 2rem;
+    padding-block: 2rem;
+    border-radius: 50%;
+}
+
+.custom-next {
+    color: black;
+    background-color: var(--white);
+}
+
+
+
+@media (max-width: 992px) {
+    .slider-section .container {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .slider-left {
+        text-align: center;
+    }
+
+    .custom-prev {
+        left: 20px;
+    }
+
+    .swiper-slide img {
+        width: auto;
+        object-fit: contain;
+        padding: 0;
+    }
+}
 /* grid  */
 .grid-section {
     overflow: hidden;

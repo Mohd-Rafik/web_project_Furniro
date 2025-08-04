@@ -399,9 +399,9 @@
 
 
         <!-- section rooms   -->
-
-        <section class="room-section">
-            <div class="container d-flex Slider-container " style="align-items: center;">
+        <section class="room-section w-100 bg-primary">
+            <div class="container d-flex align-center justify-between ">
+                <!-- Left Section -->
                 <div class="left-side d-flex justify-center align-center" style="width: 50%; ">
                     <div class="content d-flex f-direction-colum">
                         <h2 class="heading">50+ Beautiful rooms <br>inspiration</h2>
@@ -411,49 +411,42 @@
                         <button class="btn-primary">Explore More</button>
                     </div>
                 </div>
-                <div class="right-side d-flex " style="gap: 1.2rem;">
-                    <div class="releative" id="active">
-                        <img src="./assets/image/room.png" style="margin-top: 1.7rem;" />
-                        <div class="caption absolute">
-                            <p class="">01 — Bed Room</p>
-                            <h2 class="">Inner Peace</h2>
-                            <div class="arrow-btn d-inline-block text-white absolute">
-                                <i class="fa-solid fa-arrow-right"></i>
+
+                <!-- Right Section (Swiper) -->
+                <div class="slider-right swiper relative">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide relative overflow-hidden">
+                            <img src="./assets/image/room.png" alt="Room 1" class="img-fit" loading="lazy" />
+                            <div class="caption absolute">
+                                <p class="">01 — Bed Room</p>
+                                <h2 class="">Inner Peace</h2>
+                                <div class="arrow-btn d-inline-block text-white absolute">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class=" releative " id="next-img">
-                        <img src="./assets/image/swpper1.png" />
-                        <div class="caption absolute d-none">
-                            <p class="">01 — Bed Room</p>
-                            <h2 class="">Inner Peace</h2>
-                            <div class="arrow-btn d-inline-block text-white absolute">
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </div>
+
+                        <div class="swiper-slide">
+                            <img src="./assets/image/swpper1.png" class="img2" />
                         </div>
-                        <div class="swiper-paginations"></div>
-                    </div>
-                    <div class="left d-flex  justify-end  algin-center " id="left" style="align-items: center;">
-                        <button class="btn-left">
-                            <img src="./assets/icons/left.svg" alt="left arrow">
-                        </button>
-                    </div>
-                    <div class="releative" id="last-img">
-                        <img src="./assets/image/swpper2.png" />
-                        <div class="caption absolute d-none">
-                            <p class="">01 — Bed Room</p>
-                            <h2 class="">Inner Peace</h2>
-                            <div class="arrow-btn d-inline-block text-white absolute">
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </div>
+
+
+                        <div class="swiper-slide">
+                            <img src="./assets/image/swpper2.png" class="img2" alt="Room 3" loading="lazy" />
                         </div>
                     </div>
+                    <!-- Pagination Dots -->
+                    <div class="absolute" id="btn">
+                        <img src="./assets/icons/left.svg" class="btn-img" alt="left arrow">
+                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
         </section>
+
         <!-- sectio end roomse  -->
 
-        <section class="grid-section p-0 w-100" id="Grid">
+        <section class="grid-section p-0 w-100">
             <div class="container-heading   algin-center  justify-center d-flex">
                 <span class="setup-subheading">Share your Set up with</span>
                 <h2>#FurniroFurniture</h2>
@@ -523,8 +516,26 @@
         </section>
     </footer>
     <!-- footer page end  -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
+        const swiper = new Swiper(".swiper", {
+            slidesPerView: 2.5, // show 3rd image partially
+            spaceBetween: 20,
+            loop: true,
+            pagination: {
+                el: ".salder-dot",
+                clickable: true,
+            },
+            navigation: {
 
+            },
+            breakpoints: {
+                1200: { slidesPerView: 2.5 },
+                992: { slidesPerView: 1.5 },
+                768: { slidesPerView: 1 },
+                576: { slidesPerView: 1 },
+            },
+        });
     </script>
 
     <!-- Swipper Js -->
