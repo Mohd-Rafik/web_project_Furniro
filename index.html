@@ -391,7 +391,7 @@
                             </div>
                         </div>
                     </div>
-                    <button class="btn-primary" >Show More</button>
+                    <button class="Show-btn">Show More</button>
                 </div>
             </div>
         </section>
@@ -420,20 +420,18 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="swiper-slide">
                             <img src="./assets/image/swpper1.png" class="img2" />
                         </div>
-
-
                         <div class="swiper-slide">
                             <img src="./assets/image/swpper2.png" class="img2" alt="Room 3" loading="lazy" />
                         </div>
                     </div>
-                    <!-- Pagination Dots -->
+                    <!-- button -->
                     <div class="absolute" id="btn">
                         <img src="./assets/icons/left.svg" class="btn-img" alt="left arrow">
                     </div>
+                    <!-- Pagination Dots -->
                     <div class="swiper-pagination"></div>
                 </div>
             </div>
@@ -511,18 +509,20 @@
         </section>
     </footer>
     <!-- footer page end  -->
+    <!-- footer page end -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         const swiper = new Swiper(".swiper", {
-            slidesPerView: 2.5, 
+            slidesPerView: 2.5,
             spaceBetween: 20,
             loop: true,
             pagination: {
-                el: ".salder-dot",
+                el: ".swiper-pagination", // Corrected class name from "salder-dot" to "swiper-pagination"
                 clickable: true,
             },
             navigation: {
-
+                nextEl:"#btn" , // Not using next button in this case
+                prevEl: null, // Assign the left button as the previous button
             },
             breakpoints: {
                 1200: { slidesPerView: 2.5 },
