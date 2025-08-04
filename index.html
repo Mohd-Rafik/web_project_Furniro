@@ -392,15 +392,13 @@
                             </div>
                         </div>
                     </div>
-                    <button class="btn-primary">Show More</button>
+                    <button class="btn-primary" >Show More</button>
                 </div>
             </div>
         </section>
-
-
         <!-- section rooms   -->
-        <section class="room-section w-100 bg-primary">
-            <div class="container d-flex align-center justify-between ">
+        <section class="room-section w-100 ">
+            <div class="container d-flex align-center justify-between Slider-container">
                 <!-- Left Section -->
                 <div class="left-side d-flex justify-center align-center" style="width: 50%; ">
                     <div class="content d-flex f-direction-colum">
@@ -411,8 +409,6 @@
                         <button class="btn-primary">Explore More</button>
                     </div>
                 </div>
-
-                <!-- Right Section (Swiper) -->
                 <div class="slider-right swiper relative">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide relative overflow-hidden">
@@ -519,7 +515,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         const swiper = new Swiper(".swiper", {
-            slidesPerView: 2.5, // show 3rd image partially
+            slidesPerView: 2.5, 
             spaceBetween: 20,
             loop: true,
             pagination: {
